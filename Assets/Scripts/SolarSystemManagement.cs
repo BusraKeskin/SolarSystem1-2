@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class SolarSystemManagement : MonoBehaviour
 {
-    readonly float G = 100f;
-    GameObject[] celestials;
+    readonly float G = 100f; //Gravitational constant
+    GameObject[] celestials; //This array holds all the planets 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,16 +14,12 @@ public class SolarSystemManagement : MonoBehaviour
         InitialVelocity();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void FixedUpdate(){
-        Gravity();
-        
-    }    
-    void Gravity()
+        Gravity();    
+    }   
+    //Newton's law of universal gravitation
+
+    void Gravity() //Calculates interplanetary gravity
     {
         foreach(GameObject a in celestials)
         {
@@ -40,7 +37,7 @@ public class SolarSystemManagement : MonoBehaviour
         }
     }
 
-    void InitialVelocity()
+    void InitialVelocity() //Applies planetary motions
     {
         foreach(GameObject a in celestials)
         {
@@ -51,10 +48,12 @@ public class SolarSystemManagement : MonoBehaviour
                     float m2 = b.GetComponent<Rigidbody>().mass;
                     float r = Vector3.Distance(a.transform.position, b.transform.position);
                     a.transform.LookAt(b.transform);
-                    a.GetComponent<Rigidbody>().velocity += a.transform.right * Mathf.Sqrt((G * m2) / r);
+                    a.GetComponent<Rigidbody>().velocity += a.transform.right * Mathf.Sqrt((G * m2) / r); //Circular Orbital speed
                 }
             }
         }
     }
+    
 }
+
 

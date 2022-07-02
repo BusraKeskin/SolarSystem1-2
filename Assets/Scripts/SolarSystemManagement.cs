@@ -6,6 +6,7 @@ public class SolarSystemManagement : MonoBehaviour
 {
     readonly float G = 100f; //Gravitational constant
     GameObject[] celestials; //This array holds all the planets 
+   
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +50,7 @@ public class SolarSystemManagement : MonoBehaviour
                     float r = Vector3.Distance(a.transform.position, b.transform.position);
                     a.transform.LookAt(b.transform);
                     a.GetComponent<Rigidbody>().velocity += a.transform.right * Mathf.Sqrt((G * m2) / r); //Circular Orbital speed
+                    
                 }
             }
         }

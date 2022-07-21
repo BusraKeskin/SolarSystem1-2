@@ -66,7 +66,7 @@ public class CameraMotor : MonoBehaviour
             if (
                 Input.GetAxis("Mouse X") != 0
                 || Input.GetAxis("Mouse Y") != 0
-                || Input.GetMouseButton(0) && !panel.activeSelf
+                || Input.GetMouseButton(0) && panel.activeSelf
             )
             {
                 //if panel.activeSelf is true wait until it is false

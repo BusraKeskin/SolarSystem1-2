@@ -10,7 +10,7 @@ public class PopUp : MonoBehaviour
     public GameObject panel;
 
     [SerializeField]
-    public GameObject panelText;
+    public TMP_Text panelTextPro1;
 
     [SerializeField]
     public TMP_Text panelTextPro;
@@ -39,8 +39,8 @@ public class PopUp : MonoBehaviour
                     panelTextPro.text = hit.transform.name;
 
                     //change panelText to planet rigidbody mass value
-                    panelText.GetComponent<Text>().text =
-                        "Planet Mass: " + hit.transform.GetComponent<Rigidbody>().mass.ToString();
+                    panelTextPro1.text =
+                        "Mass: " + hit.transform.GetComponent<Rigidbody>().mass.ToString();
 
                     isClickedOnPlanet = true;
                     panel.SetActive(true);

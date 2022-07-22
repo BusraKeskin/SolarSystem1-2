@@ -46,7 +46,7 @@ public class CameraMotor : MonoBehaviour
 
     public Transform target;
     public int speed;
-
+ 
   
     // Start is called before the first frame update
     void Start()
@@ -56,7 +56,10 @@ public class CameraMotor : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() { }
+    void Update() {
+
+  
+    }
 
     IEnumerator OrbitCamera()
     {

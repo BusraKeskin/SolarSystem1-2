@@ -140,7 +140,6 @@ GameObject:
   - component: {fileID: 95361176}
   - component: {fileID: 95361177}
   - component: {fileID: 95361179}
-  - component: {fileID: 95361180}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Celestial
@@ -220,7 +219,7 @@ Transform:
   m_GameObject: {fileID: 95361168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10, y: 0, z: 0}
-  m_LocalScale: {x: 0.63, y: 0.63, z: 0.63}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 609096252}
@@ -386,19 +385,6 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &95361180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 95361168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf63ffacc4cbb440a6690875bdf1fb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 95361173}
 --- !u!1 &124988050
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,7 +672,6 @@ GameObject:
   - component: {fileID: 221878301}
   - component: {fileID: 221878303}
   - component: {fileID: 221878304}
-  - component: {fileID: 221878305}
   m_Layer: 0
   m_Name: Mars
   m_TagString: Celestial
@@ -766,7 +751,7 @@ Transform:
   m_GameObject: {fileID: 221878293}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15.2, y: 0, z: 0}
-  m_LocalScale: {x: 0.33, y: 0.33, z: 0.33}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -931,19 +916,6 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &221878305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 221878293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf63ffacc4cbb440a6690875bdf1fb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 221878298}
 --- !u!1 &609096251
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,7 +933,6 @@ GameObject:
   - component: {fileID: 609096259}
   - component: {fileID: 609096261}
   - component: {fileID: 609096262}
-  - component: {fileID: 609096263}
   m_Layer: 0
   m_Name: Moon
   m_TagString: Celestial
@@ -977,8 +948,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609096251}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.257, y: 0, z: 0}
-  m_LocalScale: {x: 0.017, y: 0.017, z: 0.017}
+  m_LocalPosition: {x: 0.719, y: 0, z: 0}
+  m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 95361172}
@@ -1090,7 +1061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 95361172}
-  speed: 5
+  speed: 2
 --- !u!114 &609096261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1149,7 +1120,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 100
+  m_Time: 500
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.2498084
@@ -1206,19 +1177,6 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &609096263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609096251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf63ffacc4cbb440a6690875bdf1fb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 609096253}
 --- !u!1 &651847249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,7 +1195,6 @@ GameObject:
   - component: {fileID: 651847259}
   - component: {fileID: 651847263}
   - component: {fileID: 651847264}
-  - component: {fileID: 651847265}
   m_Layer: 0
   m_Name: Jupiter
   m_TagString: Celestial
@@ -1368,8 +1325,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651847249}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalPosition: {x: 20, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1490,19 +1447,6 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &651847265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651847249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf63ffacc4cbb440a6690875bdf1fb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 651847254}
 --- !u!1 &827019301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,7 +1474,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827019301}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 49}
+  m_LocalPosition: {x: 0, y: 0, z: 35.1}
   m_LocalScale: {x: 2.465401, y: 4.3235784, z: 2.0303063}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1540,7 +1484,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 859.1121, y: 466.70117}
+  m_AnchoredPosition: {x: 984, y: 555.6}
   m_SizeDelta: {x: 88.724, y: 29.537}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &827019303
@@ -1691,8 +1635,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 500
-  field of view: 115.00001
+  far clip plane: 1000
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1717,14 +1661,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.04, y: 8.55, z: -24.49}
+  m_LocalRotation: {x: 0.22815487, y: -0.057995576, z: 0.028753992, w: 0.9714706}
+  m_LocalPosition: {x: 3.6, y: 13.9, z: -25.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 26.527, y: -6.389, z: 1.883}
 --- !u!45 &963194229
 Skybox:
   m_ObjectHideFlags: 0
@@ -1815,7 +1759,6 @@ GameObject:
   - component: {fileID: 1005721436}
   - component: {fileID: 1005721438}
   - component: {fileID: 1005721439}
-  - component: {fileID: 1005721440}
   m_Layer: 0
   m_Name: Mercury
   m_TagString: Celestial
@@ -1895,7 +1838,7 @@ Transform:
   m_GameObject: {fileID: 1005721428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.87, y: 0, z: 0}
-  m_LocalScale: {x: 0.243, y: 0.243, z: 0.243}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2060,19 +2003,6 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &1005721440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005721428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf63ffacc4cbb440a6690875bdf1fb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1005721433}
 --- !u!1 &1138117361
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,7 +2018,6 @@ GameObject:
   - component: {fileID: 1138117362}
   - component: {fileID: 1138117367}
   - component: {fileID: 1138117368}
-  - component: {fileID: 1138117369}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Sun
@@ -2104,7 +2033,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138117361}
   serializedVersion: 2
-  m_Mass: 0.1
+  m_Mass: 0.001989
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -2221,19 +2150,6 @@ MonoBehaviour:
   panelTextPro1: {fileID: 197724325}
   panelTextPro: {fileID: 124988052}
   isClickedOnPlanet: 0
---- !u!114 &1138117369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138117361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf63ffacc4cbb440a6690875bdf1fb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1138117362}
 --- !u!1 &1144829440
 GameObject:
   m_ObjectHideFlags: 0
@@ -2494,7 +2410,6 @@ GameObject:
   - component: {fileID: 1393731009}
   - component: {fileID: 1393731011}
   - component: {fileID: 1393731012}
-  - component: {fileID: 1393731013}
   m_Layer: 0
   m_Name: Venus
   m_TagString: Untagged
@@ -2739,19 +2654,6 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &1393731013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1393731001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf63ffacc4cbb440a6690875bdf1fb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1393731007}
 --- !u!1 &1809644893
 GameObject:
   m_ObjectHideFlags: 0

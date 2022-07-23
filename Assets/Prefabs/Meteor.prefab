@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6519076143075830849}
   - component: {fileID: -6386598714539760381}
   - component: {fileID: -4311740748384004680}
-  - component: {fileID: 1015614957836029708}
   m_Layer: 0
   m_Name: Meteor
   m_TagString: Untagged
@@ -286,19 +285,6 @@ TrailRenderer:
   m_MinVertexDistance: 1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &1015614957836029708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997445009937158776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf63ffacc4cbb440a6690875bdf1fb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 6519076143075830849}
 --- !u!1001 &2302322914955838207
 PrefabInstance:
   m_ObjectHideFlags: 0

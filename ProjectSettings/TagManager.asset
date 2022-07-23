@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Celestial
   - Sun
+  - YearCounter
+  - Meteor
+  - Moon
   layers:
   - Default
   - TransparentFX

@@ -4,55 +4,43 @@ using UnityEngine;
 
 public class SolarSystemManagement : MonoBehaviour
 {
-    readonly float G = 100f; //Gravitational constant
-    GameObject[] celestials; //This array holds all the planets 
-   
 
-    // Start is called before the first frame update
-    void Start()
+    public Transform target;
+    public float speed;
+    private bool isTriggered = false;
+
+    void Update()
     {
-        celestials = GameObject.FindGameObjectsWithTag("Celestial");
-        InitialVelocity();
+        TurnAround();
     }
 
-    private void FixedUpdate(){
-        Gravity();    
-    }   
-    //Newton's law of universal gravitation
-
-    void Gravity() //Calculates interplanetary gravity
+    private void TurnAround()
     {
-        foreach(GameObject a in celestials)
+        transform.RotateAround(target.transform.position, target.transform.up, speed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!isTriggered)
         {
-            foreach(GameObject b in celestials)
+            if (
+                other.gameObject.tag == "YearCounter"
+                && gameObject.tag == "Celestial" && target.tag == "Sun"
+            )
             {
-                if(!a.Equals(b))
-                {
-                    float m1 = a.GetComponent<Rigidbody>().mass;
-                    float m2 = b.GetComponent<Rigidbody>().mass;
-                    float r  = Vector3.Distance(a.transform.position, b.transform.position);
-                    
-                    a.GetComponent<Rigidbody>().AddForce((b.transform.position - a.transform.position).normalized * ( G * (m1 * m2) / (r * r)));
-                }
+                Debug.Log(gameObject.name + " completed one year!");
+                isTriggered = true;
+
             }
+            
         }
     }
 
-    void InitialVelocity() //Applies planetary motions
+    private void OnTriggerExit(Collider other)
     {
-        foreach(GameObject a in celestials)
+        if (other.gameObject.tag == "YearCounter" && gameObject.tag == "Celestial" && target.tag == "Sun")
         {
-            foreach(GameObject b in celestials)
-            {
-                if(!a.Equals(b))
-                {
-                    float m2 = b.GetComponent<Rigidbody>().mass;
-                    float r = Vector3.Distance(a.transform.position, b.transform.position);
-                    a.transform.LookAt(b.transform);
-                    a.GetComponent<Rigidbody>().velocity += a.transform.right * Mathf.Sqrt((G * m2) / r); //Circular Orbital speed
-                    
-                }
-            }
+            isTriggered = false;
         }
     }
     

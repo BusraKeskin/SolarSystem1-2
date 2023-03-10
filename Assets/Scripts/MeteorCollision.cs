@@ -35,4 +35,5 @@ public class MeteorCollision : MonoBehaviour
     {
         Destroy(gameObject, time);
     } 
+    
 }
